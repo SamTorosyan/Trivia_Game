@@ -1,70 +1,83 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>New York Times Search</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="style.css">
-    
-  </head>
-  <body>
-
-    <div class="jumbotron" id="jumbo">
-        <h1 class="display-4 text-center">New York Times Search</h1>
-    </div>
-    
-    <!-- Container for Input -->
-    <div class="container bg-white" id="input-container">
-        <div>
-            <h4 class="p-3 mt-3 mb-0 bg-dark text-white">Search Parameters</h4>
-        </div>
-        <form class="pl-4 pr-4 pt-3 pb-3 border border-dark">
-            <div class="form-group">
-            <label for="formGroupExampleInput1">Search Term</label>
-            <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="Obama">
-            </div>
-            <div class="form-group">
-            <label for="formGroupExampleInput2">Number of Records to Retrieve</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="5">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput3">Start Year (Optional)</label>
-                <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="2008">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput4">End Year (Optional)</label>
-                <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="2016">
-            </div>
-
-            <!-- Below are two different ways to make a button -->
-            <a class="btn btn-secondary" href="#" role="button">Search</a>
-            <button type="button" class="btn btn-secondary">Clear Results</button>
-
-        </form>
-    </div>
-
-    <!-- Container for Output -->  
-    <div class="container mb-5" id="output-container">
-        <div>
-            <h4 class="p-3 mt-5 mb-0 bg-dark text-white">Top Articles</h4>
-        </div>
-        <div class="pl-4 pr-4 pt-3 pb-3 border border-dark">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis similique optio ipsa officia illum assumenda recusandae alias laboriosam harum, minima earum qui, fugiat autem porro neque modi omnis et? Est.</p>
-        </div>
-    </div>
-
-
-
-<!-- Connecting to jQuery and Bootstrap 4 -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<!-- Connecting to javascript  -->
-<script src="assets/app.js"></script>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Triva Game</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>	
+		
+		<header id="masthead">
+		<div class="container">
+			<h1> <b>"Shrek The Game"</b></h1>
+		</div>
+	</header>
+	<div id="main-container" class="container">
+		<section class="main-section">
+			<h1 class="rules">The Rules</h1>
+			<p class="rules">There are 5 questions, you have 50 seconds to answer all 5 questions.</p>
+			<h2>
+				<button type="button" id="start-button">Start</button>
+			</h2>
+			
+			<div id="show-number"></div>
+			
+			<p class="question">1. What color is Shrek's skin</p>
+			<ul class="answers">
+			<input type="shrek" name="q1" value="a" id="q1a"><label for="q1a">Blue</label><br/>
+			<input type="shrek" name="q1" value="b" id="q1b"><label for="q1b">Green</label><br/>
+			<input type="shrek" name="q1" value="c" id="q1c"><label for="q1c">Yellow</label><br/>
+			<input type="shrek" name="q1" value="d" id="q1d"><label for="q1d">Tan</label><br/>
+			</ul>
+			
+			<p class="question">2. Who's Shrek's Bestfriend?</p>
+			<ul class="answers">
+			<input type="shrek" name="q2" value="a" id="q2a"><label for="q2a">Pinocchio</label><br/>
+			<input type="shrek" name="q2" value="b" id="q2b"><label for="q2b">King Farquad</label><br/>
+			<input type="shrek" name="q2" value="c" id="q2c"><label for="q2c">Donkey</label><br/>
+			<input type="shrek" name="q2" value="d" id="q2d"><label for="q2d">Shrek's mom</label><br/>
+			</ul>
+			
+			<p class="question">3. Where does Shrek live</p>
+			<ul class="answers">
+			<input type="shrek" name="q3" value="a" id="q3a"><label for="q3a">Foreverland?</label><br/>
+			<input type="shrek" name="q3" value="b" id="q3b"><label for="q3b">Far Far Away</label><br/>
+			<input type="shrek" name="q3" value="c" id="q3c"><label for="q3c">Hollywood</label><br/>
+			<input type="shrek" name="q3" value="d" id="q3d"><label for="q3d">Inglewood</label><br/>
+			</ul>
+			
+			<p class="question">4. What is Shrek?</p>
+			<ul class="answers">
+			<input type="shrek" name="q4" value="a" id="q4a"><label for="q4a">Ogre</label><br/>
+			<input type="shrek" name="q4" value="b" id="q4b"><label for="q4b">Troll</label><br/>
+			<input type="shrek" name="q4" value="c" id="q4c"><label for="q4c">Orc</label><br/>
+			<input type="shrek" name="q4" value="d" id="q4d"><label for="q4d">Undead</label><br/>
+			</ul>
+			
+			<p class="question">5. How many movies does Shrek have?</p>
+			<ul class="answers">
+			<input type="shrek" name="q5" value="a" id="q5a"><label for="q5a">2</label><br/>
+			<input type="shrek" name="q5" value="b" id="q5b"><label for="q5b">4</label><br/>
+			<input type="shrek" name="q5" value="c" id="q5c"><label for="q5c">3</label><br/>
+			<input type="shrek" name="q5" value="d" id="q5d"><label for="q5d">1</label><br/>
+			</ul>
+			
+			<button type="button" id="submit">Submit Final Answers</button>
+			
+			<div id="results">
+			Show me the answers!
+				
+			</div>
+			<button type="button" id="restart">Play Again</button>
+		</section>
+	</div>
+	<footer id="footer" class="site-footer">
+		<div class="container">
+		Thanks for playing!
+		</div>
+	</footer>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+	<script type="text/javascript" src="style/fun.js"></script>
+	
 </body>
 </html>
